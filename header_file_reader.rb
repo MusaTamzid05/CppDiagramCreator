@@ -4,16 +4,6 @@ def read_file(file_path)
     File.read(file_path).split("\n")
 end
 
-class ClassData
-
-    attr_accessor :class_name , :func_names
-
-    def initialize(class_name)
-        @class_name =  class_name
-        @func_names = []
-    end
-
-end
 
 def is_func?(line)
   if /(\w+)\*? +(\w+)\(.*\)/.match(line) == nil
